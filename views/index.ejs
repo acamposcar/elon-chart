@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Will Elon buy Twitter?</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <title>Does Elon even want to buy Twitter?</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
   <link rel='stylesheet' href='/style.css' />
-  <script src='/index.js' defer></script>
+  <script src='/bundle.js' defer></script>
 </head>
 
 <body>
-  <h1>Will Elon buy Twitter?</h1>
-  <p id="welcome">Welcome to <%= title %>
-  </p>
-  <button id="button">Click me</button>
-</body>
+  <div class="container">
 
-</html>
+    <h1>Does Elon really <br> even want to <br> buy Twitter?</h1>
+    <div id="chart-container" class="hide">
+      <canvas id="myChart"></canvas>
+    </div>
+    <div class="actions hide">
+      <button id="yes">YES</button>
+      <button id="no">NO</button>
+    </div>
+    <div id="votes"></div>
+  </div>
+</body>

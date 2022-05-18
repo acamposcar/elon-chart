@@ -1,8 +1,98 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+:root {
+  --primary: #BB86FC;
+  --primary-700: #4c14c5;
+  --secondary: #03DAC5;
 }
 
-a {
-  color: #00B7FF;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  border: 0px solid transparent;
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+  background-color: #121212;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  border-radius: 1em;
+  font-size: 2em;
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  cursor: pointer;
+}
+
+#yes {
+  background-color: hsl(339, 66%, calc(var(--lightness-offset, 0%) + 43%), 0.5);
+}
+
+#no {
+  background-color: hsla(29, 100%, calc(var(--lightness-offset, 0%) + 62%), 0.5);
+}
+
+#yes:hover,
+#no:hover {
+  --lightness-offset: 7%;
+}
+
+#yes:active,
+#no:active {
+  --lightness-offset: -10%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1em;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0.5em 0;
+  font-weight: 300;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 3em;
+}
+
+.hide {
+  display: none;
+}
+
+#votes {
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+    margin: 1em 0;
+  }
+
+  button {
+    font-size: 1.5em;
+    padding: 1em 2em;
+  }
+
+  #chart-container {
+    height: 45vh;
+  }
 }
